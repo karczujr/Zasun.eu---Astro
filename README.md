@@ -1,5 +1,4 @@
 # Astro Starter Kit: Basics
-Zasun.eu Artur
 
 ```
 npm create astro@latest -- --template basics
