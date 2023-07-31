@@ -11,8 +11,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "astro": "^2.9.3",
-    "sass": "^1.64.1"
+    "astro": "^2.9.3"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^6.2.0",
