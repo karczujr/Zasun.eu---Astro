@@ -1,0 +1,126 @@
+<nav class="main-nav" id="#Home">
+  <img src="public/img/Logo_black.svg" alt="" class="logo" />
+  <ul aria-label="Manu nawigacyjne" class="main-menu">
+    <li><a href="#Home">Home</a></li>
+    <li><a href="#O firmie">O firmie</a></li>
+    <li><a href="#Uslugi">Usługi</a></li>
+    <!-- <li><a href="#Realizacje">Realizacje</a></li> -->
+    <li><a href="#Kontakt">Kontakt</a></li>
+  </ul>
+  <label id="lang">Języki strony</label>
+  <ul class="main-menu" aria-labelledby="lang" class="lang">
+    <label id="polski">Wybrany język polski</label>
+    <li aria-labelledby="polski" class="choosen"><a href="#">Pl</a></li>
+    <label id="angielski">Język angielski</label>
+    <li aria-labelledby="angielski"><a href="#">En</a></li>
+    <label id="niemiecki">Język niemiecki</label>
+    <li aria-labelledby="niemiecki"><a href="#">De</a></li>
+  </ul>
+</nav>
+
+<style lang="scss">
+  nav {
+    a {
+      color: #0c56bc;
+      font-weight: 500;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .main-menu a::after {
+      content: '';
+      position: absolute;
+      background-color: #0c56bc;
+
+      left: 0;
+      bottom: -4px;
+
+      height: 1.5px;
+      width: 24px;
+
+      transition-property: width;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+    }
+
+    a:hover {
+      color: #00308f;
+    }
+
+    a:hover::after {
+      width: 100%;
+      color: #00308f;
+      background-color: #00308f;
+    }
+
+    /* Języki */
+
+    .lang a::after {
+      content: '';
+      position: absolute;
+      background-color: #0c56bc;
+
+      left: 0;
+      bottom: -4px;
+
+      height: 1.5px;
+      width: 50%;
+
+      transition-property: width;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+    }
+
+    a:hover {
+      color: #00308f;
+    }
+
+    a:hover::after {
+      width: 100%;
+      color: #00308f;
+      background-color: #00308f;
+    }
+
+    /* Wybrany język */
+
+    .choosen a {
+      color: #000;
+    }
+
+    .choosen a::after {
+      background-color: #000;
+
+      width: 100%;
+    }
+
+    label {
+      display: none;
+    }
+  }
+
+  /* Navigation */
+
+  .main-nav {
+    align-items: center;
+    padding-top: 40px;
+
+    .logo {
+      height: 24px;
+      margin-bottom: 24px;
+    }
+
+    ul {
+      display: flex;
+      gap: 24px;
+    }
+
+    ul li {
+      display: flex;
+      gap: 24px;
+    }
+
+    ul li a {
+      margin: 8px 0px;
+    }
+  }
+</style>
