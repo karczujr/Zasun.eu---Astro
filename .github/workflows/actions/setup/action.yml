@@ -1,6 +1,6 @@
 name: Setup Dependencies
 runs:
-  using: 'componsite'
+  using: "composite"
   steps:
     - uses: actions/setup-node@v2
       with:
