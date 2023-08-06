@@ -1,7 +1,7 @@
 name: Setup Dependencies
 description: Setup dependencies for node
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - uses: actions/setup-node@v2
       with:
