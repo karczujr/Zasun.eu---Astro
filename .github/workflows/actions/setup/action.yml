@@ -1,0 +1,10 @@
+name: Setup Dependencies
+runs:
+  using: componsite
+  steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 20
+        cache: 'npm'
+    - run: npm ci

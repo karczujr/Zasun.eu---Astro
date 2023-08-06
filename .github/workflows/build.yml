@@ -1,0 +1,17 @@
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  init:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/setup
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/setup
+      - name: Prettier Action
+        uses: creyD/prettier_action@v4.3
