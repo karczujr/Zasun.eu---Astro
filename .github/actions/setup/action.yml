@@ -1,4 +1,5 @@
 name: Setup Dependencies
+description: Setup dependencies for node
 runs:
   using: "composite"
   steps:
@@ -7,3 +8,4 @@ runs:
         node-version: 20
         cache: 'npm'
     - run: npm ci
+      shell: bash
