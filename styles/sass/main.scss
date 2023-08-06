@@ -1,3 +1,17 @@
-//@import "base/reset";
 @import "base/page";
 @import "base/typography";
+
+:root {
+    --primary-blue: #0c56bc;
+    --hover-blue: #00308F;
+    --headline-color: #1a1a1a;
+    --paragraph-color: #4a4a4a;
+    --footer-color: #898989;
+    --white: #fff;
+    --black: #000;
+
+}
+
+ul {
+    list-style: none;
+  }

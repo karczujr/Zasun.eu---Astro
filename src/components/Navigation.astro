@@ -1,16 +1,16 @@
 <nav class="main-nav" id="#Home">
-  <img src="public/img/Logo_black.svg" alt="" class="logo" />
+  <img src="img/Logo_black.svg" alt="" class="logo" />
   <ul aria-label="Manu nawigacyjne" class="main-menu">
     <li><a href="#Home">Home</a></li>
     <li><a href="#O firmie">O firmie</a></li>
     <li><a href="#Uslugi">Usługi</a></li>
-    <!-- <li><a href="#Realizacje">Realizacje</a></li> -->
     <li><a href="#Kontakt">Kontakt</a></li>
   </ul>
   <label id="lang">Języki strony</label>
   <ul class="main-menu" aria-labelledby="lang" class="lang">
+    <!-- Podwójna class'a -->
     <label id="polski">Wybrany język polski</label>
-    <li aria-labelledby="polski" class="choosen"><a href="#">Pl</a></li>
+    <li aria-labelledby="polski" class="chosen"><a href="#">Pl</a></li>
     <label id="angielski">Język angielski</label>
     <li aria-labelledby="angielski"><a href="#">En</a></li>
     <label id="niemiecki">Język niemiecki</label>
@@ -21,7 +21,7 @@
 <style lang="scss">
   nav {
     a {
-      color: #0c56bc;
+      color: var(--primary-blue);
       font-weight: 500;
       text-decoration: none;
       position: relative;
@@ -30,7 +30,7 @@
     .main-menu a::after {
       content: '';
       position: absolute;
-      background-color: #0c56bc;
+      background-color: var(--primary-blue);
 
       left: 0;
       bottom: -4px;
@@ -44,13 +44,13 @@
     }
 
     a:hover {
-      color: #00308f;
+      color: var(--hover-blue);
     }
 
     a:hover::after {
       width: 100%;
-      color: #00308f;
-      background-color: #00308f;
+      color: var(--hover-blue);
+      background-color: var(--hover-blue);
     }
 
     /* Języki */
@@ -58,7 +58,7 @@
     .lang a::after {
       content: '';
       position: absolute;
-      background-color: #0c56bc;
+      background-color: var(--primary-blue);
 
       left: 0;
       bottom: -4px;
@@ -72,23 +72,23 @@
     }
 
     a:hover {
-      color: #00308f;
+      color: var(--hover-blue);
     }
 
     a:hover::after {
       width: 100%;
-      color: #00308f;
-      background-color: #00308f;
+      color: var(--hover-blue);
+      background-color: var(--hover-blue);
     }
 
     /* Wybrany język */
 
     .choosen a {
-      color: #000;
+      color: #var(--black);
     }
 
     .choosen a::after {
-      background-color: #000;
+      background-color: #var(--black);
 
       width: 100%;
     }
@@ -109,15 +109,16 @@
       margin-bottom: 24px;
     }
 
-    ul {
+    ul,
+    li {
       display: flex;
       gap: 24px;
     }
 
-    ul li {
+    /* ul li {
       display: flex;
       gap: 24px;
-    }
+    } */
 
     ul li a {
       margin: 8px 0px;
