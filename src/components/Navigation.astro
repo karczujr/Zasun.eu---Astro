@@ -1,13 +1,13 @@
 <nav class="main-nav" id="#Home">
   <img src="img/Logo_black.svg" alt="" class="logo" />
-  <ul aria-label="Manu nawigacyjne" class="main-menu">
+  <ul aria-label="Manu nawigacyjne">
     <li><a href="#Home">Home</a></li>
     <li><a href="#O firmie">O firmie</a></li>
     <li><a href="#Uslugi">Usługi</a></li>
     <li><a href="#Kontakt">Kontakt</a></li>
   </ul>
   <!-- <label id="lang">Języki strony</label> -->
-  <ul class="main-menu" aria-labelledby="lang" class="lang">
+  <ul class="lang" aria-labelledby="lang">
     <!-- Podwójna class'a -->
     <!-- <label id="polski">Wybrany język polski</label> -->
     <li aria-labelledby="polski" class="chosen"><a href="/">Pl</a></li>
@@ -19,83 +19,18 @@
 </nav>
 
 <style lang="scss">
-  nav {
-    a {
-      color: var(--primary-blue);
-      font-weight: 500;
-      text-decoration: none;
-      position: relative;
-    }
+  .choosen a {
+    color: #var(--black);
+  }
 
-    .main-menu a::after {
-      content: '';
-      position: absolute;
-      background-color: var(--primary-blue);
+  .choosen a::after {
+    background-color: #var(--black);
 
-      left: 0;
-      bottom: -4px;
+    width: 100%;
+  }
 
-      height: 1.5px;
-      width: 24px;
-
-      transition-property: width;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-out;
-    }
-
-    a:hover {
-      color: var(--hover-blue);
-    }
-
-    a:hover::after {
-      width: 100%;
-      color: var(--hover-blue);
-      background-color: var(--hover-blue);
-    }
-
-    /* Języki */
-
-    .lang a::after {
-      content: '';
-      position: absolute;
-      background-color: var(--primary-blue);
-
-      left: 0;
-      bottom: -4px;
-
-      height: 1px;
-      width: 50%;
-
-      transition-property: width;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-out;
-    }
-
-    a:hover {
-      color: var(--hover-blue);
-    }
-
-    a:hover::after {
-      width: 100%;
-      color: var(--hover-blue);
-      background-color: var(--hover-blue);
-    }
-
-    /* Wybrany język */
-
-    .choosen a {
-      color: #var(--black);
-    }
-
-    .choosen a::after {
-      background-color: #var(--black);
-
-      width: 100%;
-    }
-
-    label {
-      display: none;
-    }
+  label {
+    display: none;
   }
 
   /* Navigation */
