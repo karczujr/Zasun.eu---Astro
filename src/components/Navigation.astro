@@ -19,14 +19,9 @@
 </nav>
 
 <style lang="scss">
-  .choosen a {
-    color: #var(--black);
-  }
-
-  .choosen a::after {
-    background-color: #var(--black);
-
-    width: 100%;
+  .chosen {
+    // --link-color: var(--black);
+    --link-color: yellow;
   }
 
   label {
@@ -35,16 +30,11 @@
 
   /* Navigation */
 
-  .lang a::after {
-    width: 8px;
-  }
-
-  .lang a:hover::after {
-    width: 100%;
+  .lang {
+    --after-width: 8px;
   }
 
   .main-nav {
-    align-items: center;
     padding-top: 40px;
 
     .logo {
