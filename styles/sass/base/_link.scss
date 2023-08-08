@@ -23,7 +23,7 @@ a {
     color: var(--hover-blue);
   }
 
-  :hover::after {
+  &:hover::after {
     width: 100%;
     color: var(--hover-blue);
     background-color: var(--hover-blue);
