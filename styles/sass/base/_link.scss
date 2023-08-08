@@ -43,13 +43,10 @@ a {
     content: '';
     position: absolute;
     background-color: var(--primary-blue);
-
     left: 0;
     bottom: -4px;
-
     height: 1px;
     width: 24px;
-
     transition-property: width;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
