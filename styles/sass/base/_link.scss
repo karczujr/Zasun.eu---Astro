@@ -1,34 +1,67 @@
 // NAVIGATION LINK
 
+// a {
+//   color: var(--primary-blue);
+//   font-weight: 500;
+//   text-decoration: none;
+//   position: relative;
+// }
+
+// a::after {
+//   content: '';
+//   position: absolute;
+//   background-color: var(--primary-blue);
+
+//   left: 0;
+//   bottom: -4px;
+
+//   height: 1px;
+//   width: 24px;
+
+//   transition-property: width;
+//   transition-duration: 0.3s;
+//   transition-timing-function: ease-out;
+// }
+
+// a:hover {
+//   color: var(--hover-blue);
+// }
+
+// a:hover::after {
+//   width: 100%;
+//   color: var(--hover-blue);
+//   background-color: var(--hover-blue);
+// }
+
 a {
   color: var(--primary-blue);
   font-weight: 500;
   text-decoration: none;
   position: relative;
-}
 
-a::after {
-  content: '';
-  position: absolute;
-  background-color: var(--primary-blue);
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--primary-blue);
 
-  left: 0;
-  bottom: -4px;
+    left: 0;
+    bottom: -4px;
 
-  height: 1px;
-  width: 24px;
+    height: 1px;
+    width: 24px;
 
-  transition-property: width;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-}
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
 
-a:hover {
-  color: var(--hover-blue);
-}
+  &:hover {
+    color: var(--hover-blue);
+  }
 
-a:hover::after {
-  width: 100%;
-  color: var(--hover-blue);
-  background-color: var(--hover-blue);
+  :hover::after {
+    width: 100%;
+    color: var(--hover-blue);
+    background-color: var(--hover-blue);
+  }
 }
