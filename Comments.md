@@ -1,6 +1,6 @@
-#COMMENTS
+COMMENTS
 
-##Lint-staged
+Lint-staged
 find changed files on commit and update them config
 
 ```json
