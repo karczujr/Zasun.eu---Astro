@@ -32,11 +32,3 @@ a:hover::after {
   color: var(--hover-blue);
   background-color: var(--hover-blue);
 }
-
-.lang a::after {
-  width: 8px;
-}
-
-.lang a:hover::after {
-  width: 100%;
-}
