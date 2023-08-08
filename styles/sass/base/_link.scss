@@ -1,7 +1,10 @@
 // NAVIGATION LINK
 
 a {
-  color: var(--primary-blue);
+  --link-color: var(--primary-blue);
+  --after-width: 24px;
+
+  color: var(--link-color);
   font-weight: 500;
   text-decoration: none;
   position: relative;
@@ -9,23 +12,21 @@ a {
   &::after {
     content: '';
     position: absolute;
-    background-color: var(--primary-blue);
+    background-color: var(--link-color);
     left: 0;
     bottom: -4px;
     height: 1px;
-    width: 24px;
+    width: var(--after-width);
     transition-property: width;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
   }
 
   &:hover {
-    color: var(--hover-blue);
+    --link-color: var(--hover-blue);
   }
 
-  :hover::after {
+  &:hover::after {
     width: 100%;
-    color: var(--hover-blue);
-    background-color: var(--hover-blue);
   }
 }
