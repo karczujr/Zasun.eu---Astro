@@ -1,5 +1,5 @@
 <footer>
-  <section class="wrapper">
+  <section class="small-body">
     <div class="company">
       <img src="img/Logo_black.svg" alt="Zasuń" class="footer_logo" />
       <p>Piotr Zasuń</p>
@@ -21,17 +21,18 @@
     margin-top: auto;
     border-top: 1px solid var(--footer-color);
 
-    .wrapper {
+    section {
       margin: 40px 0;
       gap: 16px;
       display: block;
+
+      p {
+        color: var(--footer-color);
+      }
     }
 
-    p {
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 1.5;
-      color: var(--footer-color);
+    .small-body {
+      margin-left: 0;
     }
 
     img {
@@ -50,15 +51,17 @@
     }
 
     a {
-      color: var(--black);
+      --footer-link-color: var(--black);
+
+      color: var(--footer-link-color);
       font-weight: 400;
 
       &::after {
-        background-color: var(--black);
+        background-color: var(--footer-link-color);
       }
 
       &:hover {
-        color: var(--black);
+        color: var(--footer-link-color);
       }
     }
   }

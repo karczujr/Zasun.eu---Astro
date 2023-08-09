@@ -3,7 +3,7 @@ h1 {
   font-weight: 500;
   line-height: 1.25em;
   margin: 0;
-  color: #1a1a1a;
+  color: var(--headline-color);
 }
 
 h2 {
@@ -11,7 +11,7 @@ h2 {
   font-weight: 500;
   line-height: 1.25em;
   padding-bottom: 56px;
-  color: #1a1a1a;
+  color: var(--headline-color);
 }
 
 .large-body {
@@ -19,7 +19,7 @@ h2 {
   font-weight: 400;
   line-height: 1.5;
   padding-bottom: 40px;
-  color: #4a4a4a;
+  color: var(--paragraph-color);
 }
 
 .small-body {
@@ -27,5 +27,5 @@ h2 {
   font-weight: 400;
   line-height: 1.5;
   margin-left: 16px;
-  color: #4a4a4a;
+  color: var(--paragraph-color);
 }
