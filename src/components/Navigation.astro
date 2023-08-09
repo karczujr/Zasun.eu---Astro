@@ -1,4 +1,4 @@
-<nav class="main-nav" id="#Home">
+<nav id="#Home">
   <img src="img/Logo_black.svg" alt="" class="logo" />
   <ul aria-label="Manu nawigacyjne">
     <li><a href="#Home">Home</a></li>
@@ -19,30 +19,11 @@
 </nav>
 
 <style lang="scss">
-  .chosen a {
-    color: #var(--black);
-  }
-
-  .chosen a::after {
-    background-color: #var(--black);
-    width: 100%;
-  }
-
   label {
     display: none;
   }
 
-  /* Navigation */
-
-  .lang a::after {
-    width: 8px;
-  }
-
-  .lang a:hover::after {
-    width: 100%;
-  }
-
-  .main-nav {
+  nav {
     padding-top: 40px;
 
     .logo {
@@ -59,5 +40,13 @@
     ul li a {
       margin: 8px 0;
     }
+  }
+
+  .chosen a {
+    --link-color: var(--black);
+  }
+
+  .lang a {
+    --after-width: 8px;
   }
 </style>
