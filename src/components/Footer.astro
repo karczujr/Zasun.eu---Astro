@@ -48,6 +48,10 @@
     .other {
       display: flex;
       justify-content: space-between;
+
+      @include breakpoint(mobile) {
+        display: block;
+      }
     }
 
     a {
