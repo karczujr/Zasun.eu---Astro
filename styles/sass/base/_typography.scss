@@ -4,6 +4,14 @@ h1 {
   line-height: 1.25em;
   margin: 0;
   color: var(--headline-color);
+
+  @include breakpoint(desktop) {
+    font-size: 4.5em;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 4em;
+  }
 }
 
 h2 {
@@ -12,6 +20,15 @@ h2 {
   line-height: 1.25em;
   padding-bottom: 56px;
   color: var(--headline-color);
+
+  @include breakpoint(desktop) {
+    font-size: 3em;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 2.5em;
+    padding-bottom: 40px;
+  }
 }
 
 .large-body {
@@ -20,6 +37,14 @@ h2 {
   line-height: 1.5;
   padding-bottom: 40px;
   color: var(--paragraph-color);
+
+  @include breakpoint(desktop) {
+    font-size: 1.25em;
+  }
+
+  @include breakpoint(tablet) {
+    padding-bottom: 24px;
+  }
 }
 
 .small-body {
@@ -28,4 +53,8 @@ h2 {
   line-height: 1.5;
   margin-left: 16px;
   color: var(--paragraph-color);
+
+  @include breakpoint(desktop) {
+    font-size: 1em;
+  }
 }
