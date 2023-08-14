@@ -17,6 +17,8 @@
 </footer>
 
 <style lang="scss">
+  @import '../../styles/sass/base/mixins';
+
   footer {
     margin-top: auto;
     border-top: 1px solid var(--footer-color);
@@ -33,10 +35,19 @@
 
     .small-body {
       margin-left: 0;
+      font-size: 1.125rem;
+
+      @include breakpoint(mobile) {
+        font-size: 1rem;
+      }
     }
 
     img {
-      height: 14px;
+      height: 0.875rem;
+
+      @include breakpoint(mobile) {
+        height: 0.75rem;
+      }
     }
 
     .company {
@@ -48,6 +59,16 @@
     .other {
       display: flex;
       justify-content: space-between;
+
+      @include breakpoint(mobile) {
+        display: block;
+      }
+
+      p:last-child {
+        @include breakpoint(mobile) {
+          margin-top: 16px;
+        }
+      }
     }
 
     a {
