@@ -45,14 +45,13 @@
 
       a {
         display: inline-block;
-        transition: ease-in;
 
         &::after {
           content: none;
         }
 
         i {
-          transition: all 0.2s ease-in-out;
+          transition: margin-left 0.2s ease-in-out;
         }
 
         &:hover i {
@@ -65,10 +64,6 @@
       width: 100%;
       opacity: 0.7;
       object-fit: cover;
-
-      @include breakpoint(tablet) {
-        order: 1;
-      }
     }
   }
 </style>
