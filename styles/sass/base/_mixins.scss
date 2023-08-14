@@ -11,17 +11,3 @@ $breakpoints: (
     @content;
   }
 }
-
-// @mixin desktop {
-//   @media (min-width: map-get($breakpoint, "desktop")) {
-//     @content;
-//   }
-// }
-
-// @mixin min-width($breakpoint) {
-//   @if ($breakpoint == "mobile") {
-//     @media (min-width: "mobile") {
-//       @content;
-//     }
-//   }
-// }
