@@ -17,6 +17,12 @@
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 24px));
   grid-gap: 48px;
+
+  @include breakpoint(tablet) {
+    grid-template-columns: 1fr;
+    width: auto;
+    height: auto;
+  }
 }
 
 .small-body-decoration {
