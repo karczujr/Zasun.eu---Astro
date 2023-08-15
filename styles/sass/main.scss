@@ -13,6 +13,17 @@
   --black: #000;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 24px));
+  grid-gap: 48px;
+}
+
+.small-body-decoration {
+  border-left: var(--primary-blue) 2px solid;
+  margin: 24px 0;
+}
+
 ul {
   list-style: none;
 }
