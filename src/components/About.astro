@@ -27,28 +27,28 @@
 <style lang="scss">
   @import '../../styles/sass/base/mixins';
 
-  section {
+  .grid {
     @include breakpoint(mobile) {
       grid-gap: 32px;
     }
+  }
 
-    .about-information {
-      margin: 104px 0;
+  .about-information {
+    margin: 104px 0;
 
-      @include breakpoint(tablet) {
-        margin-block: 40px 0;
-      }
+    @include breakpoint(tablet) {
+      margin-block: 40px 0;
     }
+  }
 
-    .img-about-container {
-      max-width: min(960px, 100%);
-      height: 100%;
-      object-fit: cover;
+  .img-about-container {
+    max-width: min(960px, 100%);
+    height: 100%;
+    object-fit: cover;
 
-      @include breakpoint(mobile) {
-        width: 100%;
-        margin: none;
-      }
+    @include breakpoint(mobile) {
+      width: 100%;
+      margin: none;
     }
   }
 </style>
