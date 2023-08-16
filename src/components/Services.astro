@@ -1,0 +1,71 @@
+<section>
+  <div class="services-information">
+    <h2>Usługi</h2>
+    <p class="large-body">
+      Prowadzimy kompleksowy serwis, wykonywany z&nbspnajwyższą starannością.
+      Mamy szeroki wachlarz usług z&nbspktórych możemy wyróżnić:
+    </p>
+  </div>
+
+  <ul class="grid-3-col">
+    <li class="service-1">
+      <img src="img/service_1.jpg" alt="" />
+      <div class="small-body-decoration">
+        <p class="small-body">
+          Naprawy siłowników nierozbieralnych, zakuwanych, aluminiowych
+          i&nbspstalowych.
+        </p>
+      </div>
+    </li>
+    <li class="service-2">
+      <img src="img/service_2.jpg" alt="" />
+      <div class="small-body-decoration">
+        <p class="small-body">
+          Usuwamy nieszczelności siłownika jak i&nbspwykonujemy jego odbudowę.
+        </p>
+      </div>
+    </li>
+    <li class="service-3">
+      <img src="img/service_3.jpg" alt="" />
+      <div class="small-body-decoration">
+        <p class="small-body">
+          Dorabiamy elementy mocujące siłowniki oraz czujniki położenia.
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<style lang="scss">
+  @import '../../styles/sass/base/mixins';
+
+  section {
+    margin: 144px 0;
+
+    @include breakpoint(tablet) {
+      margin: 64px 0;
+    }
+
+    .services-information {
+      max-width: 66%;
+
+      @include breakpoint(tablet) {
+        max-width: 100%;
+      }
+
+      @include breakpoint(mobile) {
+        padding-top: 24px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 264px;
+      object-fit: cover;
+
+      @include breakpoint(mobile) {
+        height: 200px;
+      }
+    }
+  }
+</style>
