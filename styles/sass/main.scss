@@ -13,6 +13,23 @@
   --black: #000;
 }
 
+.grid-2-col {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 24px));
+  grid-gap: 48px;
+
+  @include breakpoint(tablet) {
+    grid-template-columns: 1fr;
+    width: auto;
+    height: auto;
+  }
+}
+
+.small-body-decoration {
+  border-left: var(--primary-blue) 2px solid;
+  margin: 24px 0;
+}
+
 ul {
   list-style: none;
 }
