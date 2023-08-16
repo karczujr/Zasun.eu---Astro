@@ -1,0 +1,77 @@
+<section class="grid-2-col">
+  <div class="contact-information">
+    <div>
+      <h2>Kontakt</h2>
+      <p class="large-body">
+        Aby uzyskać więcej informacji na temat naszych usług, czasu realizacji
+        lub nawiązania długoterminowej współpracy, zachęcamy do kontaktu:
+      </p>
+    </div>
+    <div class="wrapper">
+      <div>
+        <p class="small-body" for="phone-number">Telefon komórkowy</p>
+        <p class="contact-font" id="phone-number">+48 666 624 900</p>
+      </div>
+      <div class="e-mail">
+        <p class="small-body" for="e-mail">Telefon komórkowy</p>
+        <a class="contact-font" id="e-mail" href="mailto:zasunpiotr@gmail.com"
+          >zasunpiotr@gmail.com</a
+        >
+      </div>
+    </div>
+  </div>
+  <div>
+    <img class="img-contact-container" src="img/contact.svg" alt="" />
+  </div>
+</section>
+
+<style lang="scss">
+  @import '../../styles/sass/base/mixins';
+
+  section {
+    align-items: center;
+    margin: 104px 0;
+
+    @include breakpoint(tablet) {
+      margin: 64px 0;
+    }
+
+    .contact-information {
+      padding: 48px 0;
+
+      @include breakpoint(mobile) {
+        padding: 24px 0;
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .e-mail {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    a::after {
+      content: none;
+    }
+
+    .small-body {
+      margin-left: 0;
+    }
+
+    img {
+      width: 80%;
+      opacity: 0.7;
+      object-fit: cover;
+    }
+
+    & > div:not(.contact-information) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+</style>
