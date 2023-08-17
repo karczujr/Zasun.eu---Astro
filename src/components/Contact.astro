@@ -7,10 +7,12 @@
         lub nawiązania długoterminowej współpracy, zachęcamy do kontaktu:
       </p>
     </div>
-    <div class="wrapper">
+    <address>
       <div>
         <p class="small-body" for="phone-number">Telefon komórkowy</p>
-        <p class="contact-font" id="phone-number">+48 666 624 900</p>
+        <a class="contact-font" id="phone-number" href="tel:+48 666 624 900"
+          >+48 666 624 900</a
+        >
       </div>
       <div class="e-mail">
         <p class="small-body" for="e-mail">Telefon komórkowy</p>
@@ -18,7 +20,7 @@
           >zasunpiotr@gmail.com</a
         >
       </div>
-    </div>
+    </address>
   </div>
   <div>
     <img class="img-contact-container" src="img/contact.svg" alt="" />
@@ -44,9 +46,10 @@
       }
     }
 
-    .wrapper {
+    address {
       display: flex;
       flex-direction: column;
+      font-style: normal;
       gap: 16px;
 
       .e-mail {
