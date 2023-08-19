@@ -1,3 +1,25 @@
+---
+import Card from './Card.astro';
+
+const cards = [
+  {
+    img: 'img/service_1.jpg',
+    description:
+      'Naprawy siłowników tzn. nierozbieralnych, zakuwanych, aluminiowych i stalowych',
+  },
+  {
+    img: 'img/service_2.jpg',
+    description:
+      'Usuwamy nieszczelności siłownika jak i wykonujemy jego odbudowę.',
+  },
+  {
+    img: 'img/service_3.jpg',
+    description:
+      'Dorabiamy elementy mocujące siłowniki oraz czujniki położenia.',
+  },
+];
+---
+
 <section>
   <div class="services-information">
     <h2>Usługi</h2>
@@ -8,31 +30,11 @@
   </div>
 
   <ul class="grid-3-col">
-    <li class="service-1">
-      <img src="img/service_1.jpg" alt="" />
-      <div class="small-body-decoration">
-        <p class="small-body">
-          Naprawy siłowników nierozbieralnych, zakuwanych, aluminiowych
-          i&nbspstalowych.
-        </p>
-      </div>
-    </li>
-    <li class="service-2">
-      <img src="img/service_2.jpg" alt="" />
-      <div class="small-body-decoration">
-        <p class="small-body">
-          Usuwamy nieszczelności siłownika jak i&nbspwykonujemy jego odbudowę.
-        </p>
-      </div>
-    </li>
-    <li class="service-3">
-      <img src="img/service_3.jpg" alt="" />
-      <div class="small-body-decoration">
-        <p class="small-body">
-          Dorabiamy elementy mocujące siłowniki oraz czujniki położenia.
-        </p>
-      </div>
-    </li>
+    {
+      cards.map((card) => (
+        <Card image={card.img} description={card.description} />
+      ))
+    }
   </ul>
 </section>
 
@@ -55,16 +57,6 @@
 
       @include breakpoint(mobile) {
         padding-top: 24px;
-      }
-    }
-
-    img {
-      width: 100%;
-      height: 264px;
-      object-fit: cover;
-
-      @include breakpoint(mobile) {
-        height: 200px;
       }
     }
   }
