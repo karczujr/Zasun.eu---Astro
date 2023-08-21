@@ -1,7 +1,12 @@
 ---
 import Card from './Card.astro';
 
-const cards = [
+interface CardInterface {
+  img: string;
+  description: string;
+}
+
+const cards: CardInterface[] = [
   {
     img: 'img/service_1.jpg',
     description:
