@@ -9,6 +9,7 @@ find changed files on commit and update them config
     "*.astro": "prettier --write"
 }
 ```
+
 <!-- <Card
       image="img/service_1.jpg"
       description="Naprawy siłowników nierozbieralnych, zakuwanych, aluminiowych i&nbspstalowych."
@@ -18,6 +19,7 @@ find changed files on commit and update them config
       description="Usuwamy nieszczelności siłownika jak i wykonujemy jego odbudowę."
     /> -->
 
-  /// <reference path="../.astro/types.d.ts" />
-  /// <reference types="astro/client" />
-  
+```ts
+/// <reference path="../.astro/types.d.ts" />
+/// <reference types="astro/client" />
+```
