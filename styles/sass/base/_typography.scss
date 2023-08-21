@@ -68,9 +68,12 @@ h2 {
   }
 }
 
-// .small-body-decoration {
-//   @extend .small-body;
-//   border-left: var(--primary-blue) 2px solid;
-//   padding-left: 16px;
-//   margin: 24px 0;
-// }
+.contact-font {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.25;
+
+  @include breakpoint(mobile) {
+    font-size: 1.5rem;
+  }
+}

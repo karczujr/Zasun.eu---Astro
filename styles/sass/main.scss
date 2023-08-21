@@ -25,6 +25,22 @@
   }
 }
 
+.grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 48px;
+
+  @include breakpoint(tablet) {
+    grid-template-columns: repeat(2, calc(50% - 24px));
+    grid-gap: 48px;
+  }
+
+  @include breakpoint(mobile) {
+    grid-template-columns: 1fr;
+    grid-gap: 48px;
+  }
+}
+
 .small-body-decoration {
   border-left: var(--primary-blue) 2px solid;
   margin: 24px 0;
