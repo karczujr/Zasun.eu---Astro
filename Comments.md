@@ -20,3 +20,4 @@ find changed files on commit and update them config
 
   /// <reference path="../.astro/types.d.ts" />
   /// <reference types="astro/client" />
+  
