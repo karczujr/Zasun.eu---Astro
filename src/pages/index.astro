@@ -6,10 +6,33 @@ import About from '../components/About.astro';
 import Services from '../components/Services.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
+
+const apiKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const handleError = (err: any) => {
+  console.log(err);
+  // The requested Builder content could not be found.
+  if (err.response.status === 404) {
+    return { data: null };
+  }
+  throw err;
+};
+
+const encodedUrl = encodeURIComponent('/');
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const { data: pageData } = await fetch(
+  `https://cdn.builder.io/api/v1/html/page?apiKey=${apiKey}&url=${encodedUrl}`,
+)
+  .then((res) => res.json())
+  .catch(handleError);
 ---
 
 <Layout>
   <Navigation />
+  <builder-component model="page" api-key={apiKey}></builder-component>
+  <script async src="https://cdn.builder.io/js/webcomponents"></script>
   <Hero />
   <About />
   <Services />
