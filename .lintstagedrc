@@ -1,5 +1,6 @@
 {
   "*.astro": ["prettier --write", "eslint --fix", "stylelint --fix"],
   "*.scss": ["prettier --write", "stylelint --fix"],
-  "[*.json, *.yml, *.md, *.ts]": ["prettier --write"]
+  "*.ts": ["prettier --write", "eslint --fix"],
+  "[*.json, *.yml, *.md]": ["prettier --write"]
 }
