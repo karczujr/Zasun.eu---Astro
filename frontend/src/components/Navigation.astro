@@ -1,0 +1,52 @@
+<nav id="#Home">
+  <img src="img/Logo_black.svg" alt="" class="logo" />
+  <ul aria-label="Manu nawigacyjne">
+    <li><a href="#Home">Home</a></li>
+    <li><a href="#O firmie">O firmie</a></li>
+    <li><a href="#Uslugi">Usługi</a></li>
+    <li><a href="#Kontakt">Kontakt</a></li>
+  </ul>
+  <!-- <label id="lang">Języki strony</label> -->
+  <ul class="lang" aria-labelledby="lang">
+    <!-- Podwójna class'a -->
+    <!-- <label id="polski">Wybrany język polski</label> -->
+    <li aria-labelledby="polski" class="chosen"><a href="/">Pl</a></li>
+    <!-- <label id="angielski">Język angielski</label> -->
+    <li aria-labelledby="angielski"><a href="/">En</a></li>
+    <!-- <label id="niemiecki">Język niemiecki</label> -->
+    <li aria-labelledby="niemiecki"><a href="/">De</a></li>
+  </ul>
+</nav>
+
+<style lang="scss">
+  label {
+    display: none;
+  }
+
+  nav {
+    padding-top: 40px;
+
+    .logo {
+      height: 24px;
+      margin-bottom: 24px;
+    }
+
+    ul,
+    li {
+      display: flex;
+      gap: 24px;
+    }
+
+    ul li a {
+      margin: 8px 0;
+    }
+  }
+
+  .chosen a {
+    --link-color: var(--black);
+  }
+
+  .lang a {
+    --after-width: 8px;
+  }
+</style>

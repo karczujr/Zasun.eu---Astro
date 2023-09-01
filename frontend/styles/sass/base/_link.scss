@@ -1,0 +1,32 @@
+// NAVIGATION LINK
+
+a {
+  --link-color: var(--primary-blue);
+  --after-width: 24px;
+
+  color: var(--link-color);
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--link-color);
+    left: 0;
+    bottom: -4px;
+    height: 1px;
+    width: var(--after-width);
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover {
+    --link-color: var(--hover-blue);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}

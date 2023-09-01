@@ -1,0 +1,54 @@
+<section class="grid-2-col">
+  <div class="about-information">
+    <h2>O firmie</h2>
+    <p class="large-body">
+      Regeneracją siłowników zajmujemy się od wielu lat. Doświadczenie
+      zdobywaliśmy poprzez wieloletnie zaangażowanie w&nbspremonty różnego
+      rodzaju siłowników hydraulicznych. Od 2018 roku jako jedyna firma
+      w&nbspPolsce wykonujemy regenerację siłowników do otwierania/zamykania
+      dachu w&nbspkabrioletach.
+    </p>
+    <div class="small-body-decoration">
+      <p class="small-body">
+        Regenerujemy siłowniki takich samochodów Audi, BMW, Mrecedes-Benz, Saab,
+        Porsche i&nbspwielu innych.
+      </p>
+    </div>
+
+    <div class="small-body-decoration">
+      <p class="small-body">Na naprawę udzielamy 12 miesięcy gwarancji.</p>
+    </div>
+  </div>
+  <div>
+    <img class="img-about-container" src="img/about.jpg" alt="" />
+  </div>
+</section>
+
+<style lang="scss">
+  @import '../../styles/sass/base/mixins';
+
+  .grid-2-col {
+    @include breakpoint(mobile) {
+      grid-gap: 32px;
+    }
+  }
+
+  .about-information {
+    margin: 104px 0;
+
+    @include breakpoint(tablet) {
+      margin-block: 40px 0;
+    }
+  }
+
+  .img-about-container {
+    max-width: min(960px, 100%);
+    height: 100%;
+    object-fit: cover;
+
+    @include breakpoint(mobile) {
+      width: 100%;
+      margin: none;
+    }
+  }
+</style>
