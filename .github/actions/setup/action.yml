@@ -7,7 +7,5 @@ runs:
       with:
         node-version: 20
         cache: 'npm'
-      working-directory: frontend
     - run: npm ci
       shell: bash
-      working-directory: frontend
