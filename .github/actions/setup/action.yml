@@ -3,11 +3,11 @@ description: Setup dependencies for node
 runs:
   using: 'composite'
   steps:
-    - run: cd frontend
-      shell: script
     - uses: actions/setup-node@v2
       with:
         node-version: 20
         cache: 'npm'
+      working-directory: frontend
     - run: npm ci
       shell: bash
+      working-directory: frontend
