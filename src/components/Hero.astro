@@ -1,22 +1,12 @@
----
-interface Props {
-  heading: string;
-  href?: string;
-  imageSrc: string;
-}
-
-const { heading, href, imageSrc } = Astro.props;
----
-
 <header class="grid-2-col">
   <section>
-    <h1>{heading}</h1>
-    <a href={href}
+    <h1>Regeneracja siłowników hydraulicznych do&nbspkabrioletów</h1>
+    <a href="/"
       >Zobacz zrealizowane projekty
       <i class="fas fa-chevron-right"></i>
     </a>
   </section>
-  <img src={imageSrc} alt="" />
+  <img src="img/header.svg" alt="" />
 </header>
 
 <style lang="scss">
