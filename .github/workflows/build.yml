@@ -6,17 +6,11 @@ on:
   pull_request:
     branches: [master]
 
-defaults:
-  run:
-    working-directory: frontend
-
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: cd frontend
-        shell: bash
       - uses: ./.github/actions/setup
       - name: 'Prettier check'
         run: npx prettier --check .
