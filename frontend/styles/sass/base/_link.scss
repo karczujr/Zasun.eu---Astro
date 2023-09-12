@@ -30,3 +30,20 @@ a {
     width: 100%;
   }
 }
+
+.chevron {
+  display: inline-block;
+
+  &::after {
+    content: none;
+  }
+
+  i {
+    margin-left: 4px;
+    transition: margin-left 0.2s ease-in-out;
+  }
+
+  &:hover i {
+    margin-left: 8px;
+  }
+}

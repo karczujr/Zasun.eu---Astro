@@ -1,25 +1,23 @@
 ---
-import {getAllPosts} from '../../sanity/api.js';
-import {urlForImage} from '../../sanity/urlForImage.js';
+import { getAllPosts } from '../sanity/api';
+import { urlForImage } from '../sanity/urlForImage.js';
 
-const posts = await getAllPosts() as Array<PostDTO> ;
-
-
-interface PostDTO {
-  mainImage: string;
-  slug: {current:string};
-  title: string;
-}
+const posts = await getAllPosts();
 ---
 
 <section>
   <ul class="grid-3-col">
-    {posts.map(post => (
-      <li>
-        <img src={urlForImage(post.mainImage).url()} alt="">
-        <a href={`/projects/${post.slug.current}`}>{post.title}<i class="fas fa-chevron-right"></i></a>
-      </li>
-    ))}
+    {
+      posts.map((post) => (
+        <li>
+          <img src={urlForImage(post.mainImage).url()} alt="" />
+          <a class="chevron" href={`/projects/${post.slug.current}`}>
+            {post.title}
+            <i class="fas fa-chevron-right" />
+          </a>
+        </li>
+      ))
+    }
   </ul>
 </section>
 
@@ -28,6 +26,11 @@ interface PostDTO {
 
   section {
     margin: 144px 0;
+
+    li a {
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
 
     @include breakpoint(tablet) {
       margin: 64px 0;

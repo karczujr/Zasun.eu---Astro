@@ -1,0 +1,84 @@
+---
+interface Props {
+  heading: string;
+  imageSrc: string;
+}
+
+const { heading, imageSrc } = Astro.props;
+---
+
+<header class="grid-2-col">
+  <section>
+    <ol class="breadcrumbs">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <p>/</p>
+      <li>
+        <a href="/gallery">Zrealizowane projekty</a>
+      </li>
+      <p>/</p>
+    </ol>
+    <h1>{heading}</h1>
+  </section>
+  <img src={imageSrc} alt="" />
+</header>
+
+<style lang="scss">
+  @import '../../styles/sass/base/mixins';
+
+  header {
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    justify-content: baseline;
+
+    // Grid
+    @include breakpoint(tablet) {
+      padding: 64px 0;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      @include breakpoint(tablet) {
+        order: 2;
+        max-width: none;
+      }
+
+      h1 {
+        margin: 16px 0;
+      }
+
+      a {
+        display: inline-block;
+
+        &::after {
+          content: none;
+        }
+
+        i {
+          transition: margin-left 0.2s ease-in-out;
+        }
+
+        &:hover i {
+          margin-left: 8px;
+        }
+      }
+    }
+
+    ol {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+</style>

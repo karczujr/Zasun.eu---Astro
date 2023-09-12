@@ -1,22 +1,16 @@
 ---
-interface Props {
-  heading: string;
-  href?: string;
-  imageSrc: string;
-}
-
-const { heading, href, imageSrc } = Astro.props;
+import H1 from '../components/H1.astro';
 ---
 
 <header class="grid-2-col">
   <section>
-    <h1>{heading}</h1>
-    <a href={href}
-      >Zobacz zrealizowane projekty
-      <i class="fas fa-chevron-right"></i>
+    <H1>Próba</H1>
+    <h1>Regeneracja siłowników hydraulicznych do&nbspkabrioletów</h1>
+    <a class="chevron" href="/gallery"
+      >Zobacz zrealizowane projekty<i class="fas fa-chevron-right"></i>
     </a>
   </section>
-  <img src={imageSrc} alt="" />
+  <img src="img/header.svg" alt="" />
 </header>
 
 <style lang="scss">
@@ -35,7 +29,6 @@ const { heading, href, imageSrc } = Astro.props;
 
     section {
       flex: 1;
-      max-width: 50%;
 
       @include breakpoint(tablet) {
         order: 2;
@@ -44,22 +37,6 @@ const { heading, href, imageSrc } = Astro.props;
 
       h1 {
         margin: 16px 0;
-      }
-
-      a {
-        display: inline-block;
-
-        &::after {
-          content: none;
-        }
-
-        i {
-          transition: margin-left 0.2s ease-in-out;
-        }
-
-        &:hover i {
-          margin-left: 8px;
-        }
       }
     }
 
